@@ -7,58 +7,38 @@
 	
 	<table border=0 align='center' bordercolor='#FFFFFF' bgcolor='#ffffff' align:'center'>
 	<tr>
-	<td>	
-	<video height="400" width="400" controls>
- 	<source src="../image/Malaria.mp4" type="video/mp4">
+	<td>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/ozyruyITxKg?si=eAX2_XQPIwxGlw5m" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
 	</td>
 	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/Monkeypox.mp4" type="video/mp4">
-	</td>
-	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/Lungcancer.mp4" type="video/mp4">
-	</td>
-	</tr>
-	<tr>
-	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/HeartAttack.mp4" type="video/mp4">
-	</td>
-	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/Corona.mp4" type="video/mp4">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/i13Co9FyRpc?si=5VCI0Ax7LSoIlxep" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
 	</td>		
-	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/bloodcancer.mp4" type="video/mp4">
-	</td>
 	</tr>
 	<tr>
 	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/Asthma.mp4" type="video/mp4">
- 	Your browser does not support the video tag.
-	</video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/xBAvxnT0ZvI?si=RJmgfg1yRHlhEbJ6" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
 	</td>
 	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/Diabetes.mp4" type="video/mp4">
- 	Your browser does not support the video tag.
-	</video>
-		</td>
-	<td>
-	<video height="400" width="400" controls>
- 	<source src="../image/BloodPressure.mp4" type="video/mp4">
- 	Your browser does not support the video tag.
-	</video>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/EY98RInP-A4?si=QZ-OEE1bB1j6Ueb1" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+	</iframe>
 	</td>
+	
 	</tr>
 
 
 	</table>
 
     <br />
-
 </asp:Content>
 

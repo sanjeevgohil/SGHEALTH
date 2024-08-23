@@ -1,0 +1,41 @@
+﻿body {
+    
+		#menu{
+			width:"150px";
+			height:"50px";
+			font-size:xx-larger;
+			color:white;
+		}
+		#font{
+			font-size:large;
+			color:black;
+			padding:10px 10px 10px 10px;
+		}	
+		#t1{
+			font-size:larger;
+			color:#7B68EE;
+			padding:10px 10px 10px 10px;
+		}	
+		#t2{
+			font-size:larger;
+			color:#0000FF;
+		}
+		#t3{
+			font-size:larger;
+			color:#FF0000;
+		}
+		#p{
+			font-size:30px;
+			color:black;
+		}
+		#f{
+			padding:10px 10px 10px 10px;
+			color:white;
+		}
+		
+		#font1{
+			font-size:10px;
+			color:black;
+		}			
+		
+}

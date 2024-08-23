@@ -1,0 +1,285 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    
+    <style>
+	.menu
+	{
+		padding:10px 10px 10px 10px;
+		text-align:center;
+		background-color:#FFE5B4;
+
+		color:#9B2509;
+		width:15%;
+	
+	}
+	.smenu
+	{
+		margin:8px 8px 8px -8px;
+		display:none;
+		position:absolute;
+		padding:8px 8px 8px 8px;	
+		background-color:#9B2509;
+		color:#9B2509;
+		z-index:1;
+	}
+	.submenu
+	{
+		padding:6px 6px 6px 6px;
+		text-align:center;
+		background-color:white;
+		color:black;
+		z-index:1;
+	}
+	.menu:hover .smenu
+	{
+		display:block;
+	}
+	button {
+        background-color: #FFE5B4;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    .l
+    {
+	    color:#9B2509;
+	    text-decoration:none;
+    }
+    </style>
+    <style>
+    .f
+    {
+	    font-size:18px;
+	    padding:10px 10px 10px 10px;
+	    background:#FFE5B4;
+    }
+    .f1
+    {
+    	font-size:20px;
+	    background:#FFE5B4;
+	    font-family:Arial;
+	    color:#9B2509
+    }
+    .l
+    {
+    	color:#9B2509;
+	    text-decoration:none;
+    }
+    </style>
+    <style> 
+		.scroll_container {
+       	 	width: 100%;
+       	 	height: 200px;
+        		/* background-color: #ddd; */
+        		overflow: hidden;
+    		}
+    		.ads_box_holder {
+	        	width: 100%;
+        		white-space: nowrap;
+        		min-width:100%; 
+       		width: auto !important; 
+        		width: 100%;
+  		}
+    		.ads_box {
+        		display: inline-block;
+        		position: relative;
+       		top: 0;
+        		left: 0;
+        		width: 190px;
+       	 	height: 200px;
+       	 	padding: 10px 10px;
+       		margin-right: 10px;
+    		}
+   	 	.ads_box img {
+        		width: 100%;
+        		height: 100%;
+        		position: absolute;
+        		top: 0;
+        		left: 0;
+        		animation: slide 25s infinite;
+    		}
+
+    		@keyframes slide {
+        		0%{ transform:translateX(0px) }
+        		10%{ transform:translateX(-200px) }
+        		20%{ transform:translateX(-400px) }
+        		30%{ transform:translateX(-600px) }
+        		40%{ transform:translateX(-800px) }
+        		50%{ transform:translateX(-1000px) }
+        		60%{ transform:translateX(-1200px) }
+        		70%{ transform:translateX(-1400px) }
+        		80%{ transform:translateX(-1600px) }
+        		90%{ transform:translateX(-1800px) }
+        		100%{ transform:translateX(0px) }
+    		}
+	</style>
+
+        
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
+                <table bgcolor="#FFE5B4">
+	            <div>
+		        <tr>
+			    <td>
+				    <a href ="Default.aspx"><img src="image/logo1.png" width="250" height="200"/></a>
+			    </td>
+			    <td width="1400" align="center" height="250px" >
+				    <asp:ScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ScriptManager>
+                    <asp:Timer ID="Timer1" runat="server" Interval="3500">
+                    </asp:Timer>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <center><asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="slider.xml" width="60%" Height="300"/></center>
+                        </ContentTemplate>
+                     <Triggers>
+                     <asp:AsyncPostBackTrigger ControlID="Timer1" EventName="Tick" />
+                     </Triggers>
+                     </asp:UpdatePanel>
+			    </td>
+	        	</tr>
+	            </div>
+	            </table>
+
+        
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+        <table style="width:100%; background-color:#9B2509">
+
+		    <tr>
+			<td>
+                <td class="menu"><b>Home
+				<table class="smenu">
+					<tr>
+    					<td class ="submenu"><a href="Default.aspx" style="text-decoration:none"><font color="#9B2509"><b>Home</b></font></a></td>
+					</tr>
+				</table>
+					
+		        <td class ="menu"><b>Doctor
+			    <table class="smenu">
+				<tr>
+					<td class="submenu"><a href="dregistration.aspx" style="text-decoration:none"><font color="#9B2509"><b>Registration</b></font></a></td>
+				</tr>
+				<tr>
+    			    <td class="submenu"><a href="dlogin.aspx" style="text-decoration:none"><font color="#9B2509"><b>Login</b></font></a></td>
+				</tr>
+				
+			    </table>
+			    </td>
+			    <td class ="menu"><b>Patient
+			    <table  class="smenu">
+				<tr>
+					<td class="submenu"><a href="pregistration.aspx" style="text-decoration:none"><font color="#9B2509"><b>Registration</b></font></a></td>
+				</tr>
+				<tr>
+    				<td class="submenu"><a href="plogin.aspx" style="text-decoration:none"><font color="#9B2509"><b>Login</b></font></a></td>
+				</tr>
+
+			    </table>
+				</td>
+				<td class ="menu"><b>Disease
+			    <table  class="smenu">
+				<tr>
+					<td class="submenu"><a href="disease1.aspx" style="text-decoration:none"><font color="#9B2509"><b>Information</b></font> </a></td>
+				</tr>
+				<tr>
+					<td class="submenu"><a href="diseasevideo.aspx" style="text-decoration:none"><font color="#9B2509"><b>Video</b></font></a></td>
+				</tr>
+			    </table>
+			    </td>			
+			    <td class ="menu"><b>Hospital
+			    <table  class="smenu">
+				<tr>
+					<td class="submenu"><a href="hospital.aspx" style="text-decoration:none"><font color="#9B2509"><b>Hospital</b></font></a></td>
+				</tr>
+	
+			    </table>	
+			    </td>
+
+			    <td class ="menu"><b>About
+			    <table  class="smenu">
+				<tr>
+					<td class="submenu"><a href="aboutus.aspx" style="text-decoration:none"><font color="#9B2509"><b>About Us</b></font></a></td>
+				</tr>
+				<tr>
+					<td class="submenu"><a href="Contactus.aspx" style="text-decoration:none"><font color="#9B2509"><b>Contact Us</b></font></a></td>
+				</tr>
+
+				
+			    </table>	
+			    </td>
+
+			    <td class ="menu"><b>FeedBack
+			    <table  class="smenu">
+				<tr>
+					<td class="submenu"><a href="feedback.aspx" style="text-decoration:none"><font color="#9B2509"><b>FeedBack</b></font></a></td>
+				</tr>
+
+				
+			    </table>	
+			    </td>
+				
+	    </table>
+
+        <div class="scroll_container">
+    	<div class="ads_box_holder">
+        		<div class="ads_box"><a href="#"><img src="image/d1.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d2.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d3.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d4.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d5.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d6.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d7.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d8.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d9.jpg"></a></div>
+        		<div class="ads_box"><a href="#"><img src="image/d10.jpg"></a></div>
+    	</div>	
+	    </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+
+        <table class="f" width=100%>
+	    <tr style="width:100%">
+		<td>
+				<a href ="Default.aspx"><img src="image/logo1.png" width="200" height="150"/>
+		</td>
+		<td>
+			<a href="Default.aspx" class="l">S.G. HEALTH</a><br>
+			<a href="dlogin.aspx" class="l">Doctor Login</a><br>
+			<a href="plogin.aspx" class="l">Patient Login</a><br>
+			<a href="privacy.php" class="l">Privacy Policy</a><br>
+			<a href="terms.php" class="l">Terms & Conditions</a></td>
+		</td>
+		
+	
+		<td width="10%">
+		<td>
+			<a href="aboutus.aspx" class="l">About Us</a><br>
+			<a href="Contactus.aspx" class="l">Contact Us </a><br>
+			<a href="hospital.aspx" class="l">Find Hospitals</a><br>
+			<a href="disease1.aspx" class="l">Disease Information </a></br>
+            <a href="diseasevideo.aspx" class="l">Disease Video </a>
+		</td>	
+		</tr>
+		<td align="right" class="l">2022.All rights reserved.</td>
+	    </table>
+	    <table class="f1" width="100%"> 
+	    <tr>
+		<td><marquee behaviour="scroll" diraction="right">Devloped by: Sanjeev Gohil </marquee></td>
+	    </tr>
+	    </table>
+    </form>
+</body>
+</html>
